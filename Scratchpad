@@ -1,7 +1,11 @@
 
 There might be a current time / time offset (from RTC raw count?) somewhere... see sync clkock
 
+The measurement cycle time is 1 hour? (from docs)
+
 Units: Temp and Rad
+
+Conc might be a f(CPM, temp, humid)
 
 // Req data???
 //   CMD  EL   PNUM     CS1      SC   RESV CS2
@@ -32,6 +36,9 @@ Units: Temp and Rad
 7aff 2080 3a00 2b000000 ff7f     0408     0000 30 000000 00 00 01 00    40 38 0e 48 86 30 9d 43    d7 ab 80 41 4a f2 4b    42 48 61 5f 8f 99 000000    38 bd 09 42 86 30 9d 43 86 30 9d 43   86 30 9d 43   3903 0000 4491  ** 50.1%
 
 7aff 2080 3a00 2b000000 ff7f     0408     0000 30 000000 00 00 02 00    50 46 0e 48 19 19 91 43    7e f6 84 41 28 c6 3f    42 48 61 5f 8f 99 000000    00 00 1c 42 d0 24 97 43 86 30 9d 43   19 19 91 43   410d 0000 8252  ** Rad: 7.83; min 7.83; med 8.16; max 8.48
+7aff 2080 3a00 2b000000 ff7f     0408     0000 30 000000 00 00 02 00    50 46 0e 48 19 19 91 43    fa 3d 80 41 df d0 35    42 48 61 5f 8f 99 000000    00 00 1c 42 d0 24 97 43 86 30 9d 43   19 19 91 43   a006 0000 ff06  ** same but maybe acc
+7aff 2080 3a00 2b000000 ff7f     0408     0000 30 000000 00 00 03 00    60 54 0e 48 de f9 80 43    39 d2 85 41 bc bf 29    42 48 61 5f 8f 99 000000    ae 47 21 42 2a c1 8f 43 86 30 9d 43   de f9 80 43   cd06 0000 3bd0  ** 6.96, min, 7.76 med, 8.48 max
+7aff20803a002b000000ff7f04080000300000000000140070430e486d9506439f0b7941b0672a4248615f8f990000002549824269d93a4386309d4345e803435e0200007b61  ** overnight - 3.63 min 3.56 max 8.48 med 5
 
 WaitS is counting down during normal ops, w app every 5 s ping -> 5s down
 
